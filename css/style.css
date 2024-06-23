@@ -1,0 +1,345 @@
+:root{
+    --main-color: #000;
+    --main-color-rgb: 0, 0, 0;
+    --secondary-color: #748182;
+    --secondary-color-rgb: 116, 129, 130;
+    --bg-color: #f7f7f7;
+    --btn-hover-bg-light:#fff;
+    --btn-hover-bg-black:#000;
+    scroll-padding-top: 56px;
+}
+/* --------general--------- */
+body{
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .logo{
+    font-family: "Montserrat", sans-serif;
+}
+.secondary-color{
+    color: var(--secondary-color);
+}
+.btn-custom{
+    --bs-btn-font-size: 0.8125rem;
+    padding: 10px 30px;
+}
+
+a{
+    text-decoration: none;
+}
+.social{
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    color: #fff;
+    border-radius:50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+}
+.heading{
+    display: inline-block;
+    margin-block: 3rem;
+    font-weight: 900;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+    &::after{
+        content: "";
+        z-index: -1;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-image: url(../imgs/dots.png);
+    }
+}
+
+/* ---------navbar------ */
+a.navbar-brand.logo{
+    font-size: 1.125rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.navbar ul{
+    font-size: 0.8125rem;
+    
+}
+.navbar-toggler:focus{
+    box-shadow: 0 0 0 ;
+}
+.nav-link:focus, .nav-link:hover{
+    color:#000;
+    font-weight: normal;
+}
+.nav-link{
+    color:#000;
+    font-weight: normal;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color:#000;
+    font-weight: normal;
+}
+.navbar-nav .nav-link, .navbar-nav .nav-link{
+    position: relative;
+}
+.navbar-nav .nav-link::after, .navbar-nav .nav-link::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 10%;
+    bottom: 2px;
+    transition: all 0.5s;
+}
+.navbar-nav .nav-link.active::after, .navbar-nav .nav-link.show::after{
+    width: 80%;
+}
+.navbar{
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* -----------home---------- */
+header{
+    background-image: url(../imgs/bg.jpg);
+    background-position: 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    .social{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+.typed-cursor{
+    font-weight: lighter;
+}
+/* ----------about-------- */
+.bg-dotted img{
+    opacity: 1;
+    display: block;
+    z-index: 1;
+}
+.bg-dotted::after{
+    content: "";
+    width: 90%;
+    height: 90%;
+    background-image: url(../imgs/dots.png);
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+}
+
+.about-content>span{
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+}
+.progress{
+    height: 25px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+.prog-bar span.h6{
+    font-size: 0.8125rem;
+    margin: 0;
+}
+.about-btn a{
+    transition: all 0.5s;
+}
+.btn[download]:hover{
+    --bs-btn-hover-bg: #fff;
+    color: #000;
+}
+.btn:hover{
+    --bs-btn-hover-bg: #000;
+    color: #fff;
+}
+/* ------services------ */
+#services{
+    background-color: var(--bg-color);
+}
+.serv-logo{
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.card:hover .serv-logo{
+    background-color: #000;
+    color: #fff;
+}
+#services .card{
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+.card p{
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+/* ---------works----------- */
+.item-overlay{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    z-index: 1;
+    transform: translatey(10px);
+    transition: all 0.5s;
+}
+.item-overlay:hover{
+    opacity: 1;
+    transform: translatey(0);
+}
+.overlay-txt{
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transform: translateY(-15px);
+    transition: all 0.5s;
+}
+.item-overlay:hover .overlay-txt{
+    transform: translateY(0);
+}
+.overlay-icon{
+    font-size: 0.875rem;
+    a{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: transparent;
+}
+button.nav-link span{
+    position: relative;
+    &::after{
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #000;
+        transition: all 0.5s;
+    }
+}
+button.nav-link.active span::after{
+    width: 100%;
+}
+/* --------clients------ */
+#clients{
+    background-color: var(--bg-color);
+}
+.picture{
+    width: 90px;
+    height: 90px;
+}
+.slider {
+    cursor: grab;
+    user-select: none;
+    P{
+        color: var(--secondary-color);
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    span{
+        color: var(--secondary-color);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+}   
+.carousel-indicators .active{
+    background-color: #869791;
+}
+.client-details p{
+    color: var(--secondary-color);
+}
+.client-details span{
+    font-weight: 900;
+}
+/* ---------team------ */
+#team{
+    background-color: var(--bg-color);
+}
+.team-card{
+    background-color: rgba(52, 52, 52, 0.8);
+}
+.team-overlay{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+}
+#team .team-card:hover .team-overlay{
+    transform: rotatey(360deg);
+    opacity: 1;
+}
+.card-pic-team img{
+    transition: all 0.5s;
+}
+.card-pic-team:hover img{
+    transform: scale(1.2);
+}
+.team-overlay i.social:hover{
+    background-color: #ffffff;
+    color: #000;
+}
+/* ---------contact------- */
+.input{
+    background-color: var(--bg-color);
+    font-size: 0.875rem;
+    border: 0;
+}
+.form-control:focus{
+    background-color: var(--bg-color);
+    border-color: transparent;
+    box-shadow: 0 0 0 0;
+}
+.contact-form input[type="submit"]{
+    font-size: 0.8125rem;
+    transition: all 0.5s;
+    padding:10px 40px ;
+    &:hover{
+        background-color: #fff;
+        color: #000;
+    }
+}
+/* ----------footer------- */
+footer{
+    background-color: #1c1c1c;
+    p{
+        font-size: 0.8125rem;
+        word-spacing: 2px;
+        color: var(--secondary-color);
+    }
+}
+ 
